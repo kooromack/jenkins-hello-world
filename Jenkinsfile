@@ -2,8 +2,9 @@ pipeline {
     agent any
     environment {
         // Setting JAVA_HOME and PATH for Unix (Linux)
-        JAVA_HOME = isUnix() ? '/usr/lib/jvm/java-11-openjdk-amd64' : 'C:\\Program Files\\Java\\jdk1.8.0_202'
-        PATH = isUnix() ? '${env.PATH}:${JAVA_HOME}/bin:/usr/bin' : '${env.PATH};${JAVA_HOME}\\bin;C:\\Users\\rehou\\AppData\\Local\\Microsoft\\WindowsApps'
+        JAVA_HOME = isUnix() ? "/usr/lib/jvm/java-11-openjdk-amd64" : 
+        "C:\\Program Files\\Java\\jdk1.8.0_202"
+        PATH = isUnix() ? "${env.PATH}:${JAVA_HOME}/bin:/usr/bin" : "${env.PATH};${JAVA_HOME}\\bin;C:\\Users\\rehou\\AppData\\Local\\Microsoft\\WindowsApps"
     }
     stages {
         stage('Checkout') {
